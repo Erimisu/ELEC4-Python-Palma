@@ -3,14 +3,11 @@
 # Activity: P2 - Custom Module: student_utils
 # Date: November 25, 2026
 
-# Custom module import
 import student_utils
-from student_utils import get_highest # brings the get_highest function from student_utils into this program.
+from student_utils import get_highest
 
-# Built-in module: printing the date and time
 from datetime import datetime
 
-# get grades
 def get_grades():
     grades = []
 
@@ -36,20 +33,43 @@ def main():
 
     if len(grades) == 0:
         print("No grades were entered.")
-    else: # after importing student_utils we can now use its functions ex. module.function()
+    else:
         average = student_utils.get_average(grades)
         highest = get_highest(grades)
         lowest = student_utils.get_lowest(grades)
         status = student_utils.get_status(average)
 
-        report_time = datetime.now() # gets the current date/time.
+        report_time = datetime.now()
 
         print("\n===== STUDENT GRADE REPORT =====")
         print(f"Average: {average:.2f}")
         print(f"Highest Grade: {highest:.2f}")
         print(f"Lowest Grade: {lowest:.2f}")
         print(f"Status: {status}")
-        print(f"Report generated: {report_time.strftime('%B %d, %Y %I:%M %p')}") # use strftime(...) para maging readable ung datae/time.
+        print(f"Report generated: {report_time.strftime('%B %d, %Y %I:%M %p')}")
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
+
+    
+
+# The student_utils.py is a module containing reusable codes such as functions ex. get_average(grades).
+# I created this to separate the functions from the main program para maging reusable ang mga 'to sa ibang programs.
+
+# import student_utils : gamit 'to, I can access the functions mula sa module(student_utils).
+# from student_utils import get_highest : gamit 'to, I can call the get_highest() directly. 
+#         average = student_utils.get_average(grades)
+#         highest = get_highest(grades)
+#         lowest = student_utils.get_lowest(grades)
+#         status = student_utils.get_status(average)
+
+# datetime is a built-in Python module, ginamit ko lang para idisplay ang date and time ng pag-run nong program.
