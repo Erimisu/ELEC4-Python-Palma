@@ -26,7 +26,7 @@ P3: Student Record Manager
 - Commands:\
         cd set1\
         cd p3\
-        py record_manager.py
+        py p3_record_manager.py
 
 P4: Safe Menu Program
 - Description: A menu-driven program that never crashes on bad input.
